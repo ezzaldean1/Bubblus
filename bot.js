@@ -864,9 +864,9 @@ client.on('voiceStateUpdate', (old, now) => {
 
   const size = channel.name.match(/\[\s(\d+)\s\]/);
 
-  if (!size) return channel.setName(`Bubbles Friends : [${currentSize}]`);
+  if (!size) return channel.setName(`Bubbles Friends : ${currentSize}`);
 
-  if (currentSize !== size) channel.setName(`Bubbles Friends : [${currentSize}]`);
+  if (currentSize !== size) channel.setName(`Bubbles Friends : ${currentSize}`);
 
 });
 client.login(process.env.BOT_TOKEN); 
